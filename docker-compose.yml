@@ -25,7 +25,7 @@ services:
             - mysql
 
     mysql:
-        image: mysql:latest
+        image: mysql:5.6
         volumes:
             - data:/var/lib/mysql
         networks:
@@ -35,6 +35,8 @@ services:
             MYSQL_DATABASE: project
             MYSQL_USER: project
             MYSQL_PASSWORD: project
+        ports:
+            - 3306:3306
 
     phpmyadmin:
         image: phpmyadmin/phpmyadmin
@@ -46,6 +48,8 @@ services:
             - mysql
         environment:
             PMA_HOST: mysql
+            PMA_ARBITRARY: 1
+        restart: always
 volumes:
     data:
 networks:
