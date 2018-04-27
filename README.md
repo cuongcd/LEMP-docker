@@ -8,8 +8,7 @@ Today i will answer that question with a demo project. Check it out
 # Software specs:
    - Docker 18.03.0-ce, build 0520e24
    - Docker-compose 1.8.0
-   - Slim 3.6.1
-   - Composer 1.6.4
+   
 # Instructions:
 1. Install Docker:
    - Ubuntu 16.04 (64 bits): https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/#os-requirements
@@ -33,22 +32,30 @@ Today i will answer that question with a demo project. Check it out
 
 7. Phpmyadmin available at `localhost:8080`
 
+## Error Handle: 
+1. If port 80 is occupied by another process when running docker-compose up it will return error port is already used. Because the nginx is config using port 80.  
+    
+    ![mbstring](http://i.prntscr.com/bIW8zpdmRruOnKWfxIhIcw.png)
+    
+    - To fix this you can decide either free the port 80 or change the docker config so nginx will use another port.
+    - To change nginx config by editing docker-compose.yml file, on nginx section change ports from 80:80 to port_you_want_to_use:80 (example 8888:80)
+        
 ## File Permissions:
-1. If you are using docker over Windows -> You'll not have any error (from step 1 through 8)
-2. If you are using docker over linux -> It's probably that on STEP 7 you got an error (PERMISSION ERROR)
-   - DEVELOPMENT: For "testing" purposes go at the level of **myappname** and execute: `sudo chmod -R 777` (***Warning*** :exclamation: : Security issues)
+1. If you are using docker over Windows -> You'll not have any error (from step 1 through 7)
+2. If you are using docker over linux -> It's probably that on STEP 6 you got an error (PERMISSION ERROR)
+   - DEVELOPMENT: For "testing" purposes go at the level of **app** and execute: `sudo chmod -R 777` (***Warning*** :exclamation: : Security issues)
    - PRODUCTION: To fix the permission's issues, follow instructions of: [Docker & File Permissions](https://serversforhackers.com/c/dckr-file-permissions)   
         - NOTE 1: For the "PHP container", if you get an error trying to go inside the container using "bash", then, try with "/bin/bash" or "sh"
-        - :key: NOTE 2: If don't want to review the Video, you can try the following: Go at the level of **app** and execute: `sudo chown -R 82:docker myappname/` (If this do not work, then try the video)
+        - :key: NOTE 2: If don't want to review the Video, you can try the following: Go at the level of **app** and execute: `sudo chown -R 82:docker app/` (If this do not work, then try the video)
 
 ## Composer Installation:
 `sudo at-get install composer`
 
-   - Error: "mbstring not found". To Fix try: `sudo apt-get install php7.0-mbstring`
+   - Error: "mbstring not found". To Fix try: `sudo apt-get install php7.2-mbstring`
    
    ![mbstring](https://user-images.githubusercontent.com/17578664/34341464-dc0f2668-e976-11e7-9516-40057a267569.jpg)
    
-   - Error: "dom not found". to fix try: `sudo apt-get install php7.0-xml` and then `sudo apt-get install zip unzip php7.0-zip`
+   - Error: "dom not found". to fix try: `sudo apt-get install php7.2-xml` and then `sudo apt-get install zip unzip php7.2-zip`
    
    ![dom](https://user-images.githubusercontent.com/17578664/34341576-e40af570-e978-11e7-8799-9b60a7dc9eac.jpg)
 
