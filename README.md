@@ -8,8 +8,7 @@ Today i will answer that question with a demo project. Check it out
 # Software specs:
    - Docker 18.03.0-ce, build 0520e24
    - Docker-compose 1.8.0
-   - Slim 3.6.1
-   - Composer 1.6.4
+   
 # Instructions:
 1. Install Docker:
    - Ubuntu 16.04 (64 bits): https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/#os-requirements
