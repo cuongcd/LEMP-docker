@@ -34,8 +34,8 @@ Today i will answer that question with a demo project. Check it out
 7. Phpmyadmin available at `localhost:8080`
 
 ## Error Handle: 
-1. If you already using port 80 when running docker-compose up it will return error port is already use. Because the nginx is config using port 80. You can choice either free the port 80 or change the config so nginx will use another port.
-    - Change nginx config by edit docker-compose.yml file, on nginx section change ports from 80:80 to port_you_want_to_use:80 (example 8888:80)
+1. If port 80 is occupied by another process when running docker-compose up it will return error port is already used. Because the nginx is config using port 80. Then you can decide either free the port 80 or change the docker config so nginx will use another port.
+    - To change nginx config by editing docker-compose.yml file, on nginx section change ports from 80:80 to port_you_want_to_use:80 (example 8888:80)
 
 ## File Permissions:
 1. If you are using docker over Windows -> You'll not have any error (from step 1 through 8)
