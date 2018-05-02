@@ -1,4 +1,4 @@
-version: "2"
+version: "3.3"
 
 services:
     nginx:
@@ -48,7 +48,6 @@ services:
             - mysql
         environment:
             PMA_HOST: mysql
-            PMA_ARBITRARY: 1
         restart: always
 volumes:
     data:
