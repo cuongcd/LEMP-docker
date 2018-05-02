@@ -17,15 +17,17 @@ Linux - Nginx - Mysql - PHP7 for development environment
 3. Clone your project into www/html folder and name it `app`:
    `./www/html/app`
 
-4. Execute the following commands
+4. Change file name `.env.example` to `.env` and modify it to suit your system
+
+5. Execute the following commands
    -To execute the docker-compose file: `docker-compose up -d`
 
-5. At this point, the containers should be running, check them with: `docker ps -a` 
+6. At this point, the containers should be running, check them with: `docker ps -a` 
 
-6. Open browser and type `localhost` you should see the running project on screen
+7. Open browser and type `localhost` you should see the running project on screen
    NOTE: If you got an error go below to FILE PERMISSIONS (over Ubuntu)
 
-7. Phpmyadmin available at `localhost:8080`
+8. Phpmyadmin available at `localhost:8080`
 
 ## Error Handle: 
 1. If port 80 is occupied by another process when running docker-compose up it will return error port is already used. Because the nginx is config using port 80.  
@@ -36,8 +38,8 @@ Linux - Nginx - Mysql - PHP7 for development environment
     - To change nginx config by editing docker-compose.yml file, on nginx section change ports from 80:80 to port_you_want_to_use:80 (example 8888:80)
         
 ## File Permissions:
-1. If you are using docker over Windows -> You'll not have any error (from step 1 through 7)
-2. If you are using docker over linux -> It's probably that on STEP 6 you got an error (PERMISSION ERROR)
+1. If you are using docker over Windows -> You'll not have any error (from step 1 through 8)
+2. If you are using docker over linux -> It's probably that on STEP 7 you got an error (PERMISSION ERROR)
    - DEVELOPMENT: For "testing" purposes go at the level of **app** and execute: `sudo chmod -R 777` (***Warning*** :exclamation: : Security issues)
    - PRODUCTION: To fix the permission's issues, follow instructions of: [Docker & File Permissions](https://serversforhackers.com/c/dckr-file-permissions)   
         - NOTE 1: For the "PHP container", if you get an error trying to go inside the container using "bash", then, try with "/bin/bash" or "sh"
