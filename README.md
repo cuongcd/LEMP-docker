@@ -3,7 +3,7 @@ Linux - Nginx - Mysql - PHP7 for development environment
 
 # Software specs:
    - Docker 18.03.0-ce, build 0520e24
-   - Docker-compose 1.8.0
+   - Docker-compose 1.21.0
    
 # Instructions:
 1. Install Docker:
