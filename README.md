@@ -13,14 +13,13 @@ Today i will answer that question with a demo project. Check it out
 1. Install Docker:
    - Ubuntu 16.04 (64 bits): https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/#os-requirements
    
-   Install Docker Compose:
+    Install Docker Compose:
    - Ubuntu 16.04 (64 bits): https://docs.docker.com/compose/install/
    
-2. Clone this public repository:
-   `https://github.com/crazyfree/LEMP-docker`
+2. Clone this repository
 
-3. Clone into www/html folder
-   `git clone <repo url> ./www/html/app`
+3. Clone your project into www/html folder and name it `app`
+   `./www/html/app`
 
 4. Execute the following commands
    -To execute the docker-compose file: `docker-compose up -d`
