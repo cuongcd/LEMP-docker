@@ -1,26 +1,21 @@
 # LEMP-DOCKER
-Linux - NGINX - Mysql - PHP7 for development environment
-
-# This is for what?
-I saw many docker newbies asking me about how to build a stack for development using docker. 
-Today i will answer that question with a demo project. Check it out
+Linux - Nginx - Mysql - PHP7 for development environment
 
 # Software specs:
    - Docker 18.03.0-ce, build 0520e24
-   - Docker-compose 1.8.0
+   - Docker-compose 1.21.0
    
 # Instructions:
 1. Install Docker:
    - Ubuntu 16.04 (64 bits): https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/#os-requirements
    
-   Install Docker Compose:
+    Install Docker Compose:
    - Ubuntu 16.04 (64 bits): https://docs.docker.com/compose/install/
    
-2. Clone this public repository:
-   `https://github.com/crazyfree/LEMP-docker`
+2. Clone this repository
 
-3. Clone into www/html folder
-   `git clone <repo url> ./www/html/app`
+3. Clone your project into www/html folder and name it `app`:
+   `./www/html/app`
 
 4. Execute the following commands
    -To execute the docker-compose file: `docker-compose up -d`
