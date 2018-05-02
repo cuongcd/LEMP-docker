@@ -18,7 +18,7 @@ Today i will answer that question with a demo project. Check it out
    
 2. Clone this repository
 
-3. Clone your project into www/html folder and name it `app`
+3. Clone your project into www/html folder and name it `app`:
    `./www/html/app`
 
 4. Execute the following commands
