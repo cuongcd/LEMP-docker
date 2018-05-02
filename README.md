@@ -1,9 +1,5 @@
 # LEMP-DOCKER
-Linux - NGINX - Mysql - PHP7 for development environment
-
-# This is for what?
-I saw many docker newbies asking me about how to build a stack for development using docker. 
-Today i will answer that question with a demo project. Check it out
+Linux - Nginx - Mysql - PHP7 for development environment
 
 # Software specs:
    - Docker 18.03.0-ce, build 0520e24
