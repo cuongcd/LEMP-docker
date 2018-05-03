@@ -1,5 +1,0 @@
-image: phpunit:6.5.8
-
-unit_test: 
-    script: 
-        - phpunit run
